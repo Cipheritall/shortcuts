@@ -37,7 +37,7 @@ def login(browser):
 class GetStatusScreenFeature(BaseFeature):
     @property
     def name(self) -> str:
-        return "Get Status Screen"
+        return "URL Status Screen"
 
     @property
     def icon(self) -> str:

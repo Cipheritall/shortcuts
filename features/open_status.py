@@ -11,7 +11,7 @@ import pyautogui
 class GetStatusScreenFeature(BaseFeature):
     @property
     def name(self) -> str:
-        return "Get Status Screen"
+        return "Open Status Screen"
 
     @property
     def icon(self) -> str:
