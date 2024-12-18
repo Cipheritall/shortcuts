@@ -1,0 +1,11 @@
+pywin32
+webdriver-manager
+selenium
+customtkinter 
+pillow 
+qtawesome
+python-dotenv
+qtawesome
+PyQt5
+pyautogui
+pygetwindow

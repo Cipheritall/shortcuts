@@ -7,7 +7,6 @@ from utils.logger import Logger
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
-        
         # Initialize logger
         self.logger = Logger("App")
         self.logger.info("Starting application")
@@ -18,7 +17,13 @@ class App(ctk.CTk):
         
         # Configure window
         self.title(f"{self.config.app_title} v{self.config.version}")
-        self.geometry("800x600")
+       
+        # Get screen dimensions
+        # self.geometry(f"{screen_width}x{screen_height}+0+0")
+        #self.state('zoomed')
+        screen_height = self.winfo_screenheight()
+        screen_width = self.winfo_screenwidth()
+        self.geometry(f"{int(screen_width/1.5)}x{screen_height}+0+0")
         
         # Set theme
         ctk.set_appearance_mode(self.config.theme)
@@ -42,6 +47,7 @@ class App(ctk.CTk):
             self.current_page.destroy()
         self.current_page = MainPage(self, self.config, self.show_login_page)
         self.current_page.pack(fill="both", expand=True)
+
 
 def main():
     logger = Logger("Main")
